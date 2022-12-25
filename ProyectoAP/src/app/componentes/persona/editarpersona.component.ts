@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Persona } from '../../Modelo/persona';
 import { PersonaService } from '../../Servicio/persona.service';
@@ -8,7 +8,7 @@ import { PersonaService } from '../../Servicio/persona.service';
   templateUrl: './editarpersona.component.html',
   styleUrls: ['./editarpersona.component.css']
 })
-export class EditarpersonaComponent {
+export class EditarpersonaComponent implements OnInit {
 
   persona: Persona = null;
 

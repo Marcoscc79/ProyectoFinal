@@ -8,6 +8,7 @@ import { Persona } from '../Modelo/persona';
   providedIn: 'root'
 })
 export class PersonaService {
+  [x: string]: any;
 
   URL = environment.URL + 'persona/';
 
