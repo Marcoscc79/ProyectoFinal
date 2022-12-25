@@ -1,0 +1,22 @@
+<!--"(ngSubmit)" => Nos permite llamar a una funcion JS al hacer submit de un formulario. Cabe destacar que este marcador va en la etiqueta < form >.-->
+<!--"novalidate" => Este atributo hace que no se valide el formulario y se envíe tal cual está-->
+<!--"ngForm" => Crea una instancia de FormGroup de nivel superior y la vincula a un formulario para rastrear el valor agregado del formulario y el estado de validación.-->
+<!--"label" => Es la etiqueta de ayuda que nos dice que contenido debe poner el usuario en el input-->
+<!--El valor del atributo for debe ser exactamente igual a la especificación del atributo en el modelo-->
+<div>
+  <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+    <div class="form-group">
+      <label for="nombre">Nombre</label>
+      <input type="text" class="form-control" id="nombre" name="nombre" [(ngModel)]="nombre" required>
+    </div>
+    <div class="form-group">
+      <label for="apellido">Apellido</label>
+      <input type="text" class="form-control" id="apellido" name="apellido" [(ngModel)]="apellido" required>
+    </div>
+    <div class="form-group">
+      <label for="descrpcion">Descrpcion</label>
+      <input type="text" class="form-control" id="descrpcion" name="descrpcion" [(ngModel)]="descrpcion" required>
+    </div>
+    <button type="submit">Agregar una Persona</button>
+  </form>
+</div>
